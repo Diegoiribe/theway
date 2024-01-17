@@ -93,14 +93,14 @@ const Body = () => {
           <span>
             <WarningAmberOutlinedIcon />
           </span>
-          <h1>Bajo construccion</h1>
+          <h1>Bajo construcción</h1>
         </Titulo>
         <p>
-          Nuestro sitio web esta en construccion, ¡pero estamos listos para
+          Nuestro sitio web está en construcción, ¡pero estamos listos para
           comenzar! estamos preparando algo asombroso y emocionante para ti.
         </p>
         <Btn>
-          <p>Proximamente</p>
+          <p>Próximamente</p>
         </Btn>
 
         <DivLinks>
