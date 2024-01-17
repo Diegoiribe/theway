@@ -25,3 +25,9 @@
 .contant_box_404 {
   margin-top: -50px;
 }
+
+@media (max-width: 980px) {
+  .four_zero_four_bg {
+    height: 35%;
+  }
+}

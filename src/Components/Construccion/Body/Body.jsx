@@ -13,6 +13,9 @@ const Div = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
 `
 
 const DivInformacion = styled.div`
@@ -20,6 +23,9 @@ const DivInformacion = styled.div`
   flex-direction: column;
   gap: 1.5rem;
   width: 50%;
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 `
 
 const Btn = styled.div`
@@ -27,25 +33,37 @@ const Btn = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
-  width: 30%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 `
 
 const DivLinks = styled.div`
   margin-top: 2rem;
   display: flex;
 
-  width: 30%;
+  width: 40%;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 980px) {
+    width: 100%;
+    margin-top: 0rem;
+  }
 `
 
 const DivImg = styled.div`
   width: 40%;
   height: 50%;
   padding: 1rem;
+  @media (max-width: 980px) {
+    width: 100%;
+    padding: 0rem;
+    margin-top: -5rem;
+  }
 `
 
 const A = styled.a`
@@ -53,18 +71,33 @@ const A = styled.a`
   color: #000;
 `
 
+const Titulo = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  flex-direction: column;
+  @media (max-width: 980px) {
+    flex-direction: row;
+    align-items: center;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+`
+
 const Body = () => {
   return (
     <Div>
       <DivInformacion>
-        <span>
-          <WarningAmberOutlinedIcon />
-        </span>
-        <h1>Bajo construccion</h1>
+        <Titulo>
+          <span>
+            <WarningAmberOutlinedIcon />
+          </span>
+          <h1>Bajo construccion</h1>
+        </Titulo>
         <p>
           Nuestro sitio web esta en construccion, ¡pero estamos listos para
           comenzar! estamos preparando algo asombroso y emocionante para ti.
-          Sorpresa especial solo para nuestos suscriptores
         </p>
         <Btn>
           <p>Proximamente</p>

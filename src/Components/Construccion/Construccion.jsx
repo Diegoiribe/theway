@@ -9,6 +9,10 @@ const Div = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 15rem;
+  @media (max-width: 980px) {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    height: 150vh;
+  }
 `
 
 const Construccion = () => {
