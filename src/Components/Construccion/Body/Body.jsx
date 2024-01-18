@@ -97,7 +97,7 @@ const Body = () => {
         </Titulo>
         <p>
           Nuestro sitio web está en construcción, ¡pero estamos listos para
-          comenzar! estamos preparando algo asombroso y emocionante para ti.
+          comenzar! tenemos preparado algo asombroso y emocionante para ti.
         </p>
         <Btn>
           <p>Próximamente</p>
