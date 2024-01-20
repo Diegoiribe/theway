@@ -2,7 +2,13 @@ import './App.css'
 import React, { useState, useEffect } from 'react'
 import PageConstruccion from './Pages/Construccion'
 import PageLaunchpad from './Pages/Launchpad'
-import { collection, getDocs, doc, updateDoc } from 'firebase/firestore'
+import {
+  collection,
+  onSnapshot,
+  doc,
+  updateDoc,
+  getDocs
+} from 'firebase/firestore'
 import { db } from './config.js'
 
 function App() {
@@ -10,19 +16,22 @@ function App() {
   const [loadingFromStorageState, setLoadingFromStorageState] = useState(true)
 
   useEffect(() => {
-    if (loadingFromStorageState) {
-      const productosRef = collection(db, 'productos')
-      getDocs(productosRef).then((querySnapshot) => {
-        const data = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data()
-        }))
-        setState(data)
-        setLoadingFromStorageState(false)
-      })
-    }
-    // Elimina 'state' de las dependencias para evitar un bucle infinito
-  }, [loadingFromStorageState])
+    const productosRef = collection(db, 'productos')
+
+    // Escuchar cambios en tiempo real
+    const unsubscribe = onSnapshot(productosRef, (querySnapshot) => {
+      const data = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data()
+      }))
+      setState(data)
+      setLoadingFromStorageState(false)
+    })
+
+    // Esta función se llama cuando el componente se desmonta,
+    // lo cual es importante para evitar pérdidas de memoria.
+    return () => unsubscribe()
+  }, []) // El arreglo de dependencias vacío asegura que esto se ejecute solo una vez al montar el componente
 
   const ActualizarItems = (id) => {
     // Encuentra el producto que quieres actualizar
