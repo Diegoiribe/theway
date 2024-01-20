@@ -10,6 +10,10 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem;
   display: flex;
+  @media (max-width: 980px) {
+    height: auto;
+    flex-direction: column-reverse;
+  }
 `
 
 const DivBody = styled.div`
@@ -18,6 +22,10 @@ const DivBody = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  @media (max-width: 980px) {
+    height: auto;
+    width: 100%;
+  }
 `
 const DivMain = styled.div`
   width: 50%;
@@ -25,6 +33,11 @@ const DivMain = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  @media (max-width: 980px) {
+    height: auto;
+    width: 100%;
+    padding: 0rem;
+  }
 `
 
 const Launchpad = ({ state, ActualizarItems }) => {

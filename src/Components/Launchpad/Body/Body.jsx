@@ -11,6 +11,11 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  @media (max-width: 980px) {
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
 `
 
 const Barra = styled.div`
@@ -112,76 +117,86 @@ const Body = ({ state, ActualizarItems }) => {
     <>
       {state.map((item, index) => (
         <Container key={index}>
-          <h1 style={{ color: '#bcbdbb' }}>The way</h1>
+          <div
+            style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
+          >
+            <h1 style={{ color: '#bcbdbb' }}>The way</h1>
 
-          <div>
-            <Title>
-              <p style={{ color: '#bcbdbb' }}>TOTAL MINTED</p>
-              <p style={{ fontWeight: 'bold', color: '#bcbdbb' }}>
-                {item.vendidos}/100
-              </p>
-            </Title>
+            <div>
+              <Title>
+                <p style={{ color: '#bcbdbb' }}>TOTAL MINTED</p>
+                <p style={{ fontWeight: 'bold', color: '#bcbdbb' }}>
+                  {item.vendidos}/100
+                </p>
+              </Title>
 
-            <Barra>
-              <BarraColor style={{ width: `${item.vendidos}%` }}></BarraColor>
-            </Barra>
-          </div>
+              <Barra>
+                <BarraColor style={{ width: `${item.vendidos}%` }}></BarraColor>
+              </Barra>
+            </div>
 
-          <Descripcion style={{ color: '#bcbdbb' }}>
-            Sei pepes is here to create memable experience for you on sei
-            blockchain, mint y have fun
-          </Descripcion>
-          <Iconos>
-            <a
-              href="https://www.facebook.com/onmyfeetmx"
-              style={{ color: '#0866ff' }}
-            >
-              <FacebookIcon fontSize="medium" />
-            </a>
-            <a
-              href="https://www.instagram.com/theway.universe/"
-              style={{
-                background:
-                  'linear-gradient(to bottom , #cf09d9, #fd044d, #fdcb00)',
-                color: 'white'
-              }}
-            >
-              <InstagramIcon fontSize="small" />
-            </a>
-            <a href="#" style={{ color: '#000' }}>
-              <XIcon fontSize="small" />
-            </a>
-          </Iconos>
-
-          <Seleccion>
-            <Stitle>
-              <p style={{ fontWeight: 'bold', color: '#bcbdbb' }}>whitelist</p>
-              <p style={{ fontSize: '.85rem', color: '#bcbdbb' }}>
-                1 per wallet
-              </p>
-            </Stitle>
-            <SBtn>
-              <p
+            <Descripcion style={{ color: '#bcbdbb' }}>
+              Sei pepes is here to create memable experience for you on sei
+              blockchain, mint y have fun
+            </Descripcion>
+            <Iconos>
+              <a
+                href="https://www.facebook.com/onmyfeetmx"
+                style={{ color: '#0866ff' }}
+              >
+                <FacebookIcon fontSize="medium" />
+              </a>
+              <a
+                href="https://www.instagram.com/theway.universe/"
                 style={{
-                  fontSize: '.75rem',
-                  fontWeight: 'bold',
+                  background:
+                    'linear-gradient(to bottom , #cf09d9, #fd044d, #fdcb00)',
                   color: 'white'
                 }}
               >
-                Ended
-              </p>
-            </SBtn>
-          </Seleccion>
-          <Informacion>
-            <p style={{ color: '#bcbdbb' }}>Precio: $35 USD</p>
-            <Label>
-              <input style={{ marginRight: '5px' }} type="checkbox" />
-              <label>Participar por chase</label>
-            </Label>
-          </Informacion>
-          <Btn onClick={() => ActualizarItems(item.id)}>
-            <p>Ordenar</p>
-          </Btn>
+                <InstagramIcon fontSize="small" />
+              </a>
+              <a href="#" style={{ color: '#000' }}>
+                <XIcon fontSize="small" />
+              </a>
+            </Iconos>
+
+            <Seleccion>
+              <Stitle>
+                <p style={{ fontWeight: 'bold', color: '#bcbdbb' }}>
+                  whitelist
+                </p>
+                <p style={{ fontSize: '.85rem', color: '#bcbdbb' }}>
+                  1 per wallet
+                </p>
+              </Stitle>
+              <SBtn>
+                <p
+                  style={{
+                    fontSize: '.75rem',
+                    fontWeight: 'bold',
+                    color: 'white'
+                  }}
+                >
+                  Ended
+                </p>
+              </SBtn>
+            </Seleccion>
+          </div>
+          <div
+            style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
+          >
+            <Informacion>
+              <p style={{ color: '#bcbdbb' }}>Precio: $35 USD</p>
+              <Label>
+                <input style={{ marginRight: '5px' }} type="checkbox" />
+                <label>Participar por chase</label>
+              </Label>
+            </Informacion>
+            <Btn onClick={() => ActualizarItems(item.id)}>
+              <p>Ordenar</p>
+            </Btn>
+          </div>
         </Container>
       ))}
     </>

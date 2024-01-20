@@ -7,6 +7,11 @@ const Container = styled.div`
   height: 75vh;
   margin: 12.25vh 20%;
   padding: 1rem;
+  @media (max-width: 980px) {
+    width: 95%;
+    margin: 2.5vh 2.5%;
+    height: auto;
+  }
 `
 
 const PageLaunchpad = ({ state, ActualizarItems }) => {

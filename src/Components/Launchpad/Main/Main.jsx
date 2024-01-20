@@ -11,12 +11,21 @@ const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
+  @media (max-width: 980px) {
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+  }
 `
 const Img = styled.div`
   width: 100%;
   height: 100%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 11px 0px;
   border-radius: 10px;
+  @media (max-width: 980px) {
+    height: 50vh;
+    width: 100%;
+  }
 `
 
 const Main = () => {
