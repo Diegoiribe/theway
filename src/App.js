@@ -11,7 +11,7 @@ import {
 } from 'firebase/firestore'
 import { db } from './config.js'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-import Header from './Components/Header/Header.jsx'
+import HeaderCondicionales from './Components/HeaderCondicionales/HeaderCondicionales.jsx'
 
 function App() {
   const [state, setState] = useState([])
@@ -68,7 +68,7 @@ function App() {
 
   return (
     <Router className="App">
-      <Header />
+      <HeaderCondicionales />
       <Routes>
         <Route
           path="/4846873215181484d4fs8adfd5s5d468f4ads98f4fff4dfad9sf756s4f"

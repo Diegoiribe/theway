@@ -24,9 +24,9 @@ const Container = styled.div`
 const Barra = styled.div`
   width: 100%;
   height: 0.75rem;
-  background: #947fbe;
+  background: #8e6fcd;
   border-radius: 5px;
-  border: 1px solid #947fbe;
+  border: 1px solid #8e6fcd;
 `
 const BarraColor = styled.div`
   height: 100%;
@@ -59,7 +59,7 @@ const Iconos = styled.div`
 const Seleccion = styled.div`
   display: flex;
   justify-content: space-between;
-  border: 1px solid #947fbe;
+  border: 1px solid #8e6fcd;
   border-radius: 5px;
   padding: 0.5rem;
   align-items: center;
@@ -73,7 +73,7 @@ const Stitle = styled.div`
 
 const SBtn = styled.div`
   padding: 0.5rem;
-  background: #947fbe;
+  background: #8e6fcd;
   border-radius: 5px;
 `
 
@@ -90,7 +90,7 @@ const Informacion = styled.div`
 const Btn = styled.div`
   width: 100%;
   height: 3.5rem;
-  background: #947fbe;
+  background: #8e6fcd;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -103,7 +103,7 @@ const Btn = styled.div`
   }
 `
 const Label = styled.div`
-  background: #947fbe;
+  background: #8e6fcd;
   border-radius: 5px;
   padding: 0.5rem;
   display: flex;

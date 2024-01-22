@@ -15,13 +15,13 @@ const P = styled.p`
 `
 
 const H1 = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: 'Harlow Solid Italic', sans-serif;
-  padding: 0rem 0.5rem;
-  font-weight: 200;
+  padding: 0rem 1rem;
+  font-weight: 100;
 `
 
-const Header = () => {
+const Header = ({ color }) => {
   const [time, setTime] = useState(new Date())
 
   useEffect(() => {
@@ -38,20 +38,32 @@ const Header = () => {
 
   return (
     <Container>
-      <div>
-        <P>MENU</P>
+      <div
+        style={{
+          maxWidth: '100px',
+          minWidth: '85px',
+
+          padding: '.25rem 1rem',
+          borderRadius: '5px',
+          textAlign: 'center'
+        }}
+      >
+        <P style={{ color: color }}>MENU</P>
       </div>
       <div>
-        <H1>w</H1>
+        <H1 style={{ color: color }}>w</H1>
       </div>
       <div
         style={{
-          border: '1px solid #000',
+          maxWidth: '100px',
+          minWidth: '85px',
+
           padding: '.25rem 1rem',
-          borderRadius: '5px'
+          borderRadius: '5px',
+          textAlign: 'center'
         }}
       >
-        <P>{time.toLocaleTimeString()}</P>
+        <P style={{ color: color }}>{time.toLocaleTimeString()}</P>
       </div>
     </Container>
   )
