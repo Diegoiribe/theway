@@ -11,6 +11,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  @media (max-width: 1400px) {
+    gap: 1rem;
+  }
   @media (max-width: 980px) {
     height: auto;
     width: 100%;
@@ -120,7 +123,17 @@ const Body = ({ state, ActualizarItems }) => {
           <div
             style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
           >
-            <h1 style={{ color: '#bcbdbb' }}>The way</h1>
+            <h1
+              style={{
+                color: '#bcbdbb'
+                // fontFamily: 'Harlow Solid Italic, sans-serif',
+                // padding: '0rem 0.5rem',
+                // fontSize: '2.5rem',
+                // fontWeight: '200'
+              }}
+            >
+              The way
+            </h1>
 
             <div>
               <Title>
