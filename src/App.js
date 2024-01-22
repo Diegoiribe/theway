@@ -10,6 +10,8 @@ import {
   getDocs
 } from 'firebase/firestore'
 import { db } from './config.js'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import Header from './Components/Header/Header.jsx'
 
 function App() {
   const [state, setState] = useState([])
@@ -65,10 +67,18 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <PageLaunchpad state={state} ActualizarItems={ActualizarItems} />
-      {/* <PageConstruccion /> */}
-    </div>
+    <Router className="App">
+      <Header />
+      <Routes>
+        <Route
+          path="/4846873215181484d4fs8adfd5s5d468f4ads98f4fff4dfad9sf756s4f"
+          element={
+            <PageLaunchpad state={state} ActualizarItems={ActualizarItems} />
+          }
+        />
+        <Route path="/" element={<PageConstruccion />} />
+      </Routes>
+    </Router>
   )
 }
 

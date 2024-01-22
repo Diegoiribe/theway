@@ -23,7 +23,7 @@ const Img = styled.div`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 11px 0px;
   border-radius: 10px;
   @media (max-width: 980px) {
-    height: 50vh;
+    height: 40vh;
     width: 100%;
   }
 `
