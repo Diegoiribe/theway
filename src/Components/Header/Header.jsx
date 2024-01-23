@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import LogoImg from '../../Assets/minilogo.png'
 
 const Container = styled.div`
   display: flex;
@@ -14,11 +15,12 @@ const P = styled.p`
   font-weight: 600;
 `
 
-const H1 = styled.h1`
-  font-size: 3rem;
-  font-family: 'Harlow Solid Italic', sans-serif;
-  padding: 0rem 1rem;
-  font-weight: 100;
+const Logo = styled.div`
+  background-image: url(${LogoImg});
+  background-size: cover;
+  background-position: center;
+  width: 140px;
+  height: 60px;
 `
 
 const Header = ({ color }) => {
@@ -40,7 +42,7 @@ const Header = ({ color }) => {
     <Container>
       <div
         style={{
-          maxWidth: '100px',
+          maxWidth: '120px',
           minWidth: '85px',
 
           padding: '.25rem 1rem',
@@ -51,13 +53,12 @@ const Header = ({ color }) => {
         <P style={{ color: color }}>MENU</P>
       </div>
       <div>
-        <H1 style={{ color: color }}>w</H1>
+        <Logo />
       </div>
       <div
         style={{
-          maxWidth: '100px',
+          maxWidth: '120px',
           minWidth: '85px',
-
           padding: '.25rem 1rem',
           borderRadius: '5px',
           textAlign: 'center'

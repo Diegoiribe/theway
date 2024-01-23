@@ -7,7 +7,7 @@ const HeaderCondicionales = ({ usuarios }) => {
   const location = useLocation()
 
   if (location.pathname !== '/') {
-    const color = '#8e6fcd'
+    const color = '#000'
     return <Header color={color} />
   }
 
