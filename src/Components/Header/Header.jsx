@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import LogoImg from '../../Assets/minilogo.png'
+import LogoImg from '../../Assets/theway-logoazultrazo.svg'
 
 const Container = styled.div`
   display: flex;
@@ -19,8 +19,8 @@ const Logo = styled.div`
   background-image: url(${LogoImg});
   background-size: cover;
   background-position: center;
-  width: 140px;
-  height: 60px;
+  width: 80px;
+  height: 50px;
 `
 
 const Header = ({ color }) => {

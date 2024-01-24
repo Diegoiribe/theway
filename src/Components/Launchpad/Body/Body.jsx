@@ -15,6 +15,7 @@ const Container = styled.div`
     gap: 1rem;
   }
   @media (max-width: 980px) {
+    gap: 1rem;
     height: auto;
     width: 100%;
     flex-direction: column-reverse;
@@ -115,25 +116,30 @@ const Label = styled.div`
   }
 `
 
+const Div = styled.div`
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  @media (max-width: 980px) {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+`
+
+const H1 = styled.h1`
+  color: #bcbdbb;
+  @media (max-width: 980px) {
+    font-size: 1.5rem;
+  }
+`
+
 const Body = ({ state, ActualizarItems }) => {
   return (
     <>
       {state.map((item, index) => (
         <Container key={index}>
-          <div
-            style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
-          >
-            <h1
-              style={{
-                color: '#bcbdbb'
-                // fontFamily: 'Harlow Solid Italic, sans-serif',
-                // padding: '0rem 0.5rem',
-                // fontSize: '2.5rem',
-                // fontWeight: '200'
-              }}
-            >
-              The way
-            </h1>
+          <Div>
+            <H1>The way</H1>
 
             <div>
               <Title>
@@ -195,7 +201,7 @@ const Body = ({ state, ActualizarItems }) => {
                 </p>
               </SBtn>
             </Seleccion>
-          </div>
+          </Div>
           <div
             style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}
           >
