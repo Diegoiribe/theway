@@ -53,7 +53,7 @@ const Header = ({ color }) => {
         <P style={{ color: color }}>MENU</P>
       </div>
       <div>
-        <Logo />
+        <h1>W</h1>
       </div>
       <div
         style={{
