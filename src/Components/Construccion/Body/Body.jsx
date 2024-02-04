@@ -9,7 +9,7 @@ import './Body.css'
 
 const Div = styled.div`
   display: flex;
-  justify-content: space-around;
+  gap: 5rem;
   align-items: center;
   width: 100%;
   height: 100%;
