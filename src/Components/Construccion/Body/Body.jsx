@@ -16,7 +16,7 @@ const Div = styled.div`
   @media (max-width: 980px) {
     justify-content: space-between;
     flex-direction: column;
-    padding: 2.5rem 0.5rem 0;
+    padding: 5.5rem 0.5rem 0;
   }
 `
 
